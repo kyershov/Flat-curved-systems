@@ -1,12 +1,18 @@
-\documentclass[runningheads]{llncs}
+\documentclass[runningheads,8pt]{llncs}
+\setcounter{secnumdepth}{4}
 %
 \usepackage[numbers]{natbib}
+\usepackage{multirow}
 \usepackage{url,bm}
 \usepackage[breaklinks=true,unicode=true,urlcolor = blue,colorlinks = true,citecolor = blue,linkcolor = blue]{hyperref}
 \usepackage{amssymb}
 \usepackage{amsmath}
 \setcounter{tocdepth}{3}
 \usepackage{graphicx}
+%
+%\usepackage{geometry}
+%\geometry{a4paper,portrait}  % Set paper/media size and orientation.
+%\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
 %
 \graphicspath{{./figs/}}
 %
@@ -65,23 +71,25 @@
 	\maketitle
 	
 	
-%\begin{abstract}
-%	Abstract...
-%	\keywords{Ferromagnets, curvilinear geometry, exchange interaction}
-%\end{abstract}
+\begin{abstract}
+	In this chapter we consider the flat curved ferromagnetic quasi one-dimensionless systems. We present (i) the general toolbox for description of magnetic properties of the curvilinear ferromagnetic wires and ribbons, (ii) the available methods for fabrication and characterization of curved systems.  The presented methods are illustrated on the different geometries. 
+	\keywords{Ferromagnets, curvilinear geometry, exchange interaction.}
+\end{abstract}
 	
-\tableofcontents
-\clearpage	
+%\tableofcontents
+%\clearpage	
+%\input{1_introduction}
 
-\include{1_introduction}
+Recent advances in the fabrication of curvilinear magnets \cite{Streubel16a,Fernandez17,Ball17,Sanz-Hernandez18,Huth18,Huth20,Sanz-Hernandez20} raises the question of the influence of curvature on statics and dynamics of a magnetization. For spintronic devices the geometrically induced potentials arising from curved shapes gain practical importance. For example, designs of these devices require wires with curvilinear segments, e.g. vertical U-shaped configuration increases the storage density of the potential magnetic racetrack memory devices~\cite{Parkin08,Zhang15}.
+...
 
-\include{2_theory}
+{\color{red} I don't know, do we need the introduction in here?} 
 
-\include{3_fabrication}
+\input{2_theory}
 
-\include{4_characterization}
+\input{3_fabrication}
 
-\include{5_conclusions}
+\input{4_characterization}
 
 \bibliographystyle{splncs}
 \bibliography{soliton}
