@@ -8,25 +8,6 @@
 \usepackage{amsmath,amssymb,bm,latexsym,mathrsfs,enumerate}
 \usepackage[breaklinks=true,colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
 \usepackage{graphicx}
-\usepackage{dcolumn}% Align table columns on decimal point
-%=======
-%\documentclass[runningheads,8pt]{llncs}
-%\setcounter{secnumdepth}{4}
-%%
-%\usepackage[numbers]{natbib}
-%\usepackage{multirow}
-%\usepackage{url,bm}
-%\usepackage[breaklinks=true,unicode=true,urlcolor = blue,colorlinks = true,citecolor = blue,linkcolor = blue]{hyperref}
-%\usepackage{amssymb}
-%\usepackage{amsmath}
-%\setcounter{tocdepth}{3}
-%\usepackage{graphicx}
-%%
-%%\usepackage{geometry}
-%%\geometry{a4paper,portrait}  % Set paper/media size and orientation.
-%%\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
-%%
-%>>>>>>> b61b02ea57c994ac46d04852ade124ad5098f213
 \graphicspath{{./figs/}}
 \usepackage{mathtools}
 
@@ -34,11 +15,9 @@
 
 \usepackage[todonotes={textsize=tiny,textwidth=35pt},truncate=hyphenate,deletedmarkup=sout]{changes}
 \renewcommand{\vec}[1]{\bm{#1}}
-\usepackage{nb}
 %
 % Predifined authors with "changes" package
 %
-
 \usepackage{gitinfo2}
 
 \usepackage{multirow}
@@ -47,7 +26,6 @@
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 
 \renewcommand{\paragraph}[1]{\textbf{#1}}
-%\renewcommand{\vec}[1]{\bm{#1}}
 
 \begin{document}
 	
@@ -57,10 +35,8 @@
 	
 \institute{
 	Kostiantyn V. Yershov \at
-	Bogolyubov Institute for Theoretical Physics of NAS of Ukraine,\\
-	Metrologichna str. 14,  03143 Kyiv, Ukraine, \\ 
-	Leibniz-Institut f\"ur Festk\"orper- und Werkstoffforschung, IFW Dresden,\\
-	Helmholtzstra{\ss}e 20, D-01171 Dresden, Germany,\newline
+	Bogolyubov Institute for Theoretical Physics of NAS of Ukraine, 03143 Kyiv, Ukraine, \\ 
+	Leibniz-Institut f\"ur Festk\"orper- und Werkstoffforschung, IFW Dresden, D-01171 Dresden, Germany,\newline
 	\email{k.yershov@ifw-dresden.de}
 	\and Oleksii\,M.~Volkov \at
 	Helmholtz-Zentrum Dresden-Rossendorf e.V., Institute of Ion Beam Physics and Materials Research, 01328 Dresden, Germany,\newline
@@ -73,123 +49,21 @@
 
 \keywords{Ferromagnets, curvilinear geometry, exchange interaction.}	
 	
-	
-	
-	
 \input{1_introduction}
 	
 \input{2_theory}
 
-\input{2.1_Ring}
+\input{3_flat_wires}
 
-\input{2.2_Circular_segment}
-
-\input{2.3_Meander}
-
-\input{2.4_Spiral}
-
-\input{2.5_Parabola}
+\input{4_domain_walls}
 	
-\input{3_fabrication_n_characterization}
+\input{5_fabrication_n_characterization}
 	
-\input{4_conclusions}
-	
-
-	
+%\input{4_conclusions}
+		
 {\scriptsize
 	\bibliographystyle{splncs}
 	\bibliography{soliton}	
 }
 	
 \end{document}
-
-
-
-%\documentclass[runningheads]{llncs}
-%%
-%\usepackage[numbers]{natbib}
-%\usepackage{url,bm}
-%\usepackage[breaklinks=true,unicode=true,urlcolor = blue,colorlinks = true,citecolor = blue,linkcolor = blue]{hyperref}
-%\usepackage{amssymb}
-%\usepackage{amsmath}
-%\setcounter{tocdepth}{3}
-%\usepackage{graphicx}
-%%
-%\graphicspath{{./figs/}}
-%%
-%\renewcommand\bibname{References}
-%%
-%\renewcommand{\vec}[1]{\bm{#1}}
-%% Define Authors
-%%
-%% 
-%\urldef{\mailsa}\path|{k.yershov@ifw-dresden.de,|
-%	\urldef{\mailsb}\path|o.volkov@hzdr.de}|   
-%\newcommand{\keywords}[1]{\par\addvspace\baselineskip
-%	\noindent\keywordname\enspace\ignorespaces#1}
-%
-%\begin{document}
-%%\preprint{\textcolor[rgb]{0.00,0.50,0.75}{\texttt{Draft \gitAbbrevHash{} by \gitCommitterName{} on \gitCommitterIsoDate}}}	
-%	\mainmatter  % start of an individual contribution
-%	
-%	% first the title is needed
-%	\title{Flat curved systems}
-%	
-%	% a short form should be given in case it is too long for the running head
-%	\titlerunning{Flat curved systems}
-%	
-%	% the name(s) of the author(s) follow(s) next
-%	%
-%	% NB: Chinese authors should write their first names(s) in front of
-%	% their surnames. This ensures that the names appear correctly in
-%	% the running heads and the author index.
-%	%
-%	\author{Kostiantyn V. Yershov$^{1,2}$ \and Oleksii M. Volkov$^{3}$}
-%	%
-%	\authorrunning{Flat curved systems: Kostiantyn V. Yershov and Oleksii M. Volkov}
-%	% (feature abused for this document to repeat the title also on left hand pages)
-%	
-%	% the affiliations are given next; don't give your e-mail address
-%	% unless you accept that it will be published
-%	\institute{$^1$Bogolyubov Institute for Theoretical Physics of NAS of Ukraine,\\
-%		Metrologichna str. 14,  03143 Kyiv, Ukraine\\
-%		$^2$Leibniz-Institut f\"ur Festk\"orper- und Werkstoffforschung, IFW Dresden,\\
-%		 Helmholtzstra{\ss}e 20, D-01171 Dresden, Germany\\
-%		 $^{3}$Helmholtz-Zentrum Dresden-Rossendorf e. V. Institute of Ion Beam Physics and Materials Research,
-%		 Bautzner Landstra{\ss}e 400, 01328 Dresden, Germany\\
-%		\mailsa
-%		\mailsb}
-%	
-%	%
-%	% NB: a more complex sample for affiliations and the mapping to the
-%	% corresponding authors can be found in the file "llncs.dem"
-%	% (search for the string "\mainmatter" where a contribution starts).
-%	% "llncs.dem" accompanies the document class "llncs.cls".
-%	%
-%	
-%	\toctitle{Flat curved systems}
-%	\tocauthor{Kostiantyn V. Yershov and Oleksii M. Volkov}
-%	\maketitle
-%	
-%	
-%%\begin{abstract}
-%%	Abstract...
-%%	\keywords{Ferromagnets, curvilinear geometry, exchange interaction}
-%%\end{abstract}
-%	
-%\tableofcontents
-%\clearpage	
-%
-%\include{1_introduction}
-%
-%\include{2_theory}
-%
-%\include{3_fabrication}
-%
-%\include{4_characterization}
-%
-%\include{5_conclusions}
-%
-%\bibliographystyle{splncs}
-%\bibliography{soliton}
-%\end{document}
